@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  demoapi:
+    image: ${DOCKER_REGISTRY-}structuredloggingdemo
+    build:
+      context: .
+      dockerfile: src/DemoApi/Dockerfile
+
+  seq:
+    image: datalust/seq:latest
+    environment:
+    - ACCEPT_EULA=Y
+    ports:
+    - "44380:80"
