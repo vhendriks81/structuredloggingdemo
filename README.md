@@ -6,7 +6,7 @@ git clone https://github.com/vhendriks81/structuredloggingdemo
 ```
 
 Then you can run the application using docker-compose:
-```c#
+```powershell
 cd structuredloggingdemo
 docker-compose up
 ```
