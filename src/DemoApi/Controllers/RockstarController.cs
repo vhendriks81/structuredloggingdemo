@@ -11,11 +11,9 @@ namespace DemoApi.Controllers
     public class RockstarController : ControllerBase
     {
         private readonly IDemoService _demoService;
-        private readonly ILogger<RockstarController> _logger;
 
-        public RockstarController(ILogger<RockstarController> logger, IDemoService demoService)
+        public RockstarController(IDemoService demoService)
         {
-            _logger = logger;
             _demoService = demoService;
         }
 
