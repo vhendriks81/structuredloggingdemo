@@ -1,24 +1,22 @@
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-
 namespace DemoApi.Services
 {
+    using System;
+    using System.Collections.Generic;
     using DemoApi.Models;
+    using Microsoft.Extensions.Logging;
 
     public class DemoService : IDemoService
     {
         private readonly ILogger<DemoService> _logger;
-
-        private List<Rockstar> _rockstars;
-
         private readonly Random _random = new Random();
+        private readonly List<Rockstar> _rockstars;
 
         public DemoService(ILogger<DemoService> logger)
         {
             _logger = logger;
 
-            _rockstars = new List<Rockstar>()
+            // Create a simple in-memory data seed.
+            _rockstars = new List<Rockstar>
             {
                 new Rockstar("John", "1234567890", ".NET Developer"),
                 new Rockstar("Peter", "6734345623", ".NET Developer"),

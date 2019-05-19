@@ -5,6 +5,9 @@ namespace DemoApi.Tasks
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
 
+    /// <summary>
+    /// Quick and dirty implementation of a simple task runner just for demo purposes.
+    /// </summary>
     public class TaskRunner : ITaskRunner
     {
         private readonly ILogger<TaskRunner> _logger;

@@ -1,25 +1,24 @@
-using System.Collections.Generic;
-using DemoApi.Services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-
 namespace DemoApi.Controllers
 {
+    using System.Collections.Generic;
     using DemoApi.Models;
+    using DemoApi.Services;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
 
     [Route("api/[controller]")]
     [ApiController]
     public class RockstarController : ControllerBase
     {
-        private readonly ILogger<RockstarController> _logger;
         private readonly IDemoService _demoService;
+        private readonly ILogger<RockstarController> _logger;
 
         public RockstarController(ILogger<RockstarController> logger, IDemoService demoService)
         {
             _logger = logger;
             _demoService = demoService;
         }
-        
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<Rockstar>> Get()

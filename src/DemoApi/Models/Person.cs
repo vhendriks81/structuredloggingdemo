@@ -5,13 +5,6 @@ namespace DemoApi.Models
 
     public class Person
     {
-        public Person(string name, string socialSecurityNumber)
-        {
-            Name = name;
-            Id = Guid.NewGuid();
-            SocialSecurityNumber = socialSecurityNumber;
-        }
-
         public Guid Id { get; }
 
         [NotLogged]
@@ -19,5 +12,12 @@ namespace DemoApi.Models
 
         [LogMasked(ShowFirst = 3)]
         public string SocialSecurityNumber { get; }
+
+        public Person(string name, string socialSecurityNumber)
+        {
+            Name = name;
+            Id = Guid.NewGuid();
+            SocialSecurityNumber = socialSecurityNumber;
+        }
     }
 }

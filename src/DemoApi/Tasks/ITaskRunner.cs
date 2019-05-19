@@ -1,4 +1,4 @@
-﻿namespace DemoApi.Tasks
+namespace DemoApi.Tasks
 {
     using System.Threading.Tasks;
 
