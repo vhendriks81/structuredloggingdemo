@@ -1,4 +1,5 @@
 # A demo application to demonstrate structured logging using ASP.NET Core, Serilog and seq
+Part of a dutch article: https://www.teamrockstars.nl/tech-burst/structured-logging-een-net-applicatie
 
 To test this out yourself:
 ```powershell
